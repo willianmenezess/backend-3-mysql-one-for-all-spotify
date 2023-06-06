@@ -50,3 +50,44 @@ VALUES
     ('Blind Guardian'),
     ('Nina Simone');
 
+CREATE TABLE SpotifyClone.album(
+    album_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    album VARCHAR(50) NOT NULL,
+    artista_id INT NOT NULL,
+    ano_lancamento YEAR NOT NULL,
+    FOREIGN KEY (artista_id) REFERENCES SpotifyClone.artista(artista_id)
+) engine = InnoDB;
+INSERT INTO SpotifyClone.album (album, artista_id, ano_lancamento)
+VALUES
+    ('Lemonade', 1, 2016),
+    ('Greatest Hits', 2, 1981),
+    ('Hot Space', 2, 1982),
+    ('Falso Brilhante', 3, 1976),
+    ('Vento de Maio', 3, 1977),
+    ('QVVJFA?', 4, 2019),
+    ('Somewhere Far Beyond', 5, 1992),
+    ('I Put A Spell On You', 6, 1965);
+
+CREATE TABLE SpotifyClone.cancoes(
+    cancao_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    cancao_nome VARCHAR(50) NOT NULL,
+    duracao_segundos INT NOT NULL,
+    FOREIGN KEY (album_id) REFERENCES SpotifyClone.album(album_id)
+) engine = InnoDB;
+INSERT INTO SpotifyClone.cancoes (cancao_nome, duracao_segundos, album_id)
+VALUES
+    ('Formation', 263, 1),
+    ('Sorry', 242, 1),
+    ('Don''t Hurt Yourself', 256, 1),
+    ('Crazy In Love', 235, 1),
+    ('Bohemian Rhapsody', 354, 2),
+    ('Don''t Stop Me Now', 203, 2),
+    ('Under Pressure', 152, 3),
+    ('Como Nossos Pais', 105, 4),
+    ('O Medo de Amar é o Medo de Ser Livre', 207, 5),
+    ('Samba em Paris', 267, 6),
+    ('The Bard''s Song', 244, 7),
+    ('Feeling Good', 100, 8);
+
+
+
