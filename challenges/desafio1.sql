@@ -1,4 +1,4 @@
--- Descomente e altere as linhas abaixo:
+
 
 DROP DATABASE IF EXISTS SpotifyClone;
 CREATE DATABASE IF NOT EXISTS SpotifyClone;
@@ -57,16 +57,17 @@ CREATE TABLE SpotifyClone.album(
     ano_lancamento YEAR NOT NULL,
     FOREIGN KEY (artista_id) REFERENCES SpotifyClone.artista(artista_id)
 ) engine = InnoDB;
-INSERT INTO SpotifyClone.album (album, artista_id, ano_lancamento)
+INSERT INTO SpotifyClone.album (album_titulo, artista_id, ano_lancamento)
 VALUES
-    ('Lemonade', 1, 2016),
-    ('Greatest Hits', 2, 1981),
-    ('Hot Space', 2, 1982),
-    ('Falso Brilhante', 3, 1976),
-    ('Vento de Maio', 3, 1977),
-    ('QVVJFA?', 4, 2019),
-    ('Somewhere Far Beyond', 5, 1992),
-    ('I Put A Spell On You', 6, 1965);
+('Renaissance', 1, 2022),
+('Jazz', 2, 1978),
+('Hot Space', 2, 1982),
+('Falso Brilhante', 3, 1998),
+('Vento de Maio', 3, 2001),
+('QVVJFA?', 4, 2003),
+('Somewhere Far Beyond', 5, 2007),
+('I Put A Spell On You', 6, 2012);
+
 
 CREATE TABLE SpotifyClone.cancoes(
     cancao_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -77,18 +78,16 @@ CREATE TABLE SpotifyClone.cancoes(
 ) engine = InnoDB;
 INSERT INTO SpotifyClone.cancoes (cancao_nome, duracao_segundos, album_id)
 VALUES
-    ('Formation', 263, 1),
-    ('Sorry', 242, 1),
-    ('Don''t Hurt Yourself', 256, 1),
-    ('Crazy In Love', 235, 1),
-    ('Bohemian Rhapsody', 354, 2),
-    ('Don''t Stop Me Now', 203, 2),
-    ('Under Pressure', 152, 3),
-    ('Como Nossos Pais', 105, 4),
-    ('O Medo de Amar é o Medo de Ser Livre', 207, 5),
-    ('Samba em Paris', 267, 6),
-    ('The Bard''s Song', 244, 7),
-    ('Feeling Good', 100, 8);
+    ('Break My Soul', '279', '1'),
+    ('Virgo''s Groove', '369', '1'),
+    ('Alien Superstar', '116', '1'),
+    ('Don''t Stop Me Now', '203', '2'),
+    ('Under Pressure', '152', '3'),
+    ('Como Nossos Pais', '105', '4'),
+    ('O Medo de Amar é o Medo de Ser Livre', '207', '5'),
+    ('Samba em Paris', '267', '6'),
+    ('The Bard''s Song', '244', '7'),
+    ('Feeling Good', '100', '8');
 
 CREATE TABLE SpotifyClone.seguindo_artistas(
     usuario_id INT NOT NULL,
@@ -136,5 +135,11 @@ VALUES
     (5, 5, '2020-08-06 15:23:43'),
     (6, 7, '2017-01-24 00:31:17'),
     (6, 1, '2017-10-12 12:35:20'),
-    (7, 4, '2011-12-15 22:30');
+    (7, 4, '2011-12-15 22:30:49'),
+    (8, 4, '2012-03-17 14:56:41'),
+    (9, 9, '2022-02-24 21:14:22'),
+    (10, 3, '2015-12-13 08:30:22');
 
+
+
+	
