@@ -72,6 +72,7 @@ CREATE TABLE SpotifyClone.cancoes(
     cancao_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     cancao_nome VARCHAR(50) NOT NULL,
     duracao_segundos INT NOT NULL,
+    album_id INT NOT NULL,
     FOREIGN KEY (album_id) REFERENCES SpotifyClone.album(album_id)
 ) engine = InnoDB;
 INSERT INTO SpotifyClone.cancoes (cancao_nome, duracao_segundos, album_id)
