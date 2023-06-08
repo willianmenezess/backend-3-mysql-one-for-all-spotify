@@ -1,16 +1,5 @@
 # Boas vindas ao repositório do projeto One For All
 
-Para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo e, se tiver qualquer dúvida, nos envie por Slack! #vqv 🚀
-
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir deste repositório, utilizando uma branch específica e um Pull Request para colocar seus códigos.
-
-<details>
-<summary>📃 Termos e acordos</summary><br>
-
-Ao iniciar este projeto, você concorda com as diretrizes do [Código de Conduta](https://app.betrybe.com/learn/student-manual/codigo-de-conduta-da-pessoa-estudante) e do [Manual da Pessoa Estudante](https://app.betrybe.com/learn/student-manual) da Trybe.
-
-</details>
-
 ## Entregáveis
 
 <details>
