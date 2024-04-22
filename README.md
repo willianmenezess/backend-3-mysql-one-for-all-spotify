@@ -795,3 +795,5 @@ O que será verificado:
 - Será validado se a `QUERY` retorna a quantidade correta de pessoas usuárias e favoritadas por faixa etária.
 
 </details>
+
+<!-- commit -->
